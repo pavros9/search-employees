@@ -1,6 +1,10 @@
 @import './fonts.scss';
 
+
+body {
+    margin: 0;
+}
+
 .title {
     color: red;
-    font-family: Montserrat-Bold, sans-serif;
 }

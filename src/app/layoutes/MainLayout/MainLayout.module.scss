@@ -1,0 +1,42 @@
+.content {
+    box-shadow: 4px 4px 8px 0 rgb(34 60 80 / 20%);
+    border-radius: 10px;
+    display: flex;
+    min-height: 575px;
+}
+
+.logo {
+    color: red;
+    font-family: Montserrat-Bold, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.sidebar {
+    top: 0;
+    left: 0;
+    min-width: 290px;
+    padding: 27px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100%;
+    padding: 27px 20px;
+}
+
+.topWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    max-width: 1366px;
+    padding: 50px;
+    margin: auto;
+}

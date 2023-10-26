@@ -1,6 +1,7 @@
 import { memo, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from '../config/routeConfig';
+import { MainLayout } from 'app/layoutes/MainLayout/MainLayout';
 
 export const AppRouter = memo(() => {
     return (
@@ -9,7 +10,7 @@ export const AppRouter = memo(() => {
                 {Object.values(routeConfig).map(({ element, path }) => (
                     <Route
                         path={path}
-                        element={<div>{element}</div>}
+                        element={<MainLayout>{element}</MainLayout>}
                         key={path}
                     />
                 ))}

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const App = () => {
     return (
         <>
-            <NavLink
+            {/* <NavLink
                 to="/"
                 className={({ isActive }) =>
                     `rounded-md px-3 py-2 text-sm font-medium ${
@@ -24,7 +24,7 @@ const App = () => {
                 }
             >
                 ProfilePage
-            </NavLink>
+            </NavLink> */}
 
             <AppRouter />
         </>
