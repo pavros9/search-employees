@@ -14,9 +14,8 @@ declare module '*.svg' {
     const SVG: React.VFC<React.SVGProps<SVGSVGElement>>;
     export default SVG;
 }
-
-declare const IS_DEV: boolean;
-declare const API: string;
+declare const __IS_DEV__: boolean;
+declare const __API__: string;
 
 type DeepPartial<T> = {
     [P in keyof T]?: DeepPartial<T[P]>;
