@@ -3,9 +3,12 @@ import webpack from 'webpack'
 import { type BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import * as dotenv from 'dotenv'
 
-export function buildPlugins (options: BuildOptions): webpack.WebpackPluginInstance[] {
+export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstance[] {
     const { paths, isDev, analyze, apiUrl } = options
+    const env = dotenv.config({ path: `.env.${isDev ? 'development' : 'production'}` })
+
     return [
         new HtmlWebpackPlugin({
             template: paths.html
@@ -16,8 +19,9 @@ export function buildPlugins (options: BuildOptions): webpack.WebpackPluginInsta
             chunkFilename: 'css/[name].[contenthash:8].css'
         }),
         new webpack.DefinePlugin({
-            IS_DEV: JSON.stringify(isDev),
-            API: JSON.stringify(apiUrl)
+            __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
+            'process.env': JSON.stringify(env.parsed)
         }),
         new BundleAnalyzerPlugin({
             analyzerMode: analyze ? 'server' : 'disabled'
