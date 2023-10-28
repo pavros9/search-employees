@@ -1,0 +1,23 @@
+.InputWrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 48px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    padding: 13px 14.5px;
+    font-size: 14px;
+    border-radius: 8px;
+    outline: none;
+    border: 1.5px solid #E9ECEF;
+}
+
+.label {
+    margin-bottom: 22px;
+    display: block;
+    color: #333333;
+    font-weight: bold;
+    font-family: Montserrat-Bold, sans-serif;
+}
