@@ -3,6 +3,7 @@
     align-items: center;
     border-radius: 48px;
     width: 100%;
+    position: relative;
 }
 
 .input {
@@ -12,6 +13,7 @@
     border-radius: 8px;
     outline: none;
     border: 1.5px solid #E9ECEF;
+
 }
 
 .label {
@@ -20,4 +22,10 @@
     color: #333333;
     font-weight: bold;
     font-family: Montserrat-Bold, sans-serif;
+}
+
+.loaderWrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

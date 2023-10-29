@@ -6,6 +6,7 @@ import React, {
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
+import { Loader } from '../Loader/Loader';
 
 
 type HTMLInputProps = Omit<
@@ -16,6 +17,7 @@ type HTMLInputProps = Omit<
 
 interface InputProps extends HTMLInputProps {
     className?: string;
+    isLoading?: boolean;
     value?: string | number;
     label?: string;
     onChange?: (value: string) => void;
@@ -29,8 +31,10 @@ export const Input = memo((props: InputProps) => {
         type = 'text',
         placeholder,
         label,
+        isLoading,
         ...otherProps
     } = props;
+
     const [isFocused, setIsFocused] = useState(false);
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,6 +65,10 @@ export const Input = memo((props: InputProps) => {
                 placeholder={placeholder}
                 {...otherProps}
             />
+            {isLoading && <div className={cls.loaderWrapper}>
+                <Loader />
+            </div>}
+
 
         </div>
     );
@@ -70,6 +78,7 @@ export const Input = memo((props: InputProps) => {
             <label >
                 <span className={cls.label}>{label}</span>
                 {input}
+
             </label>
         );
     }
