@@ -1,1 +1,7 @@
-export { Employee } from './types/types'
+export { Employee } from './model/types/types'
+export { EmployeeList } from './ui/EmployeeList/EmployeeList'
+export { EmployeeCard } from './ui/EmployeeCard/EmployeeCard'
+export { EmployeeSchema } from './model/types/EmployeeSchema'
+export { getEmployees } from './model/selectors/getEmployees'
+export { getIsLoadingEmployees } from './model/selectors/getIsLoadingEmployees'
+export { getSelectedEmployee } from './model/selectors/getSelectedEmployee'

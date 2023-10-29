@@ -1,10 +1,11 @@
 import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { $api } from 'shared/api/api';
+import { employeeReducer } from 'entities/Employee/model/slice/employeeSlice';
 
 export function createReduxStore(initialState?: StateSchema) {
     const rootReducers: ReducersMapObject<StateSchema> = {
-
+        employee: employeeReducer
     };
 
     const extraArg: ThunkExtraArg = {
