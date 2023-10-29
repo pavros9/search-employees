@@ -2,21 +2,17 @@ import { Employee } from 'entities/Employee';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 
-interface Config {
-
-}
 
 export const fetchEmployees = createAsyncThunk<
     Employee[],
-    Config | undefined,
+    string | undefined,
     ThunkConfig<string>
->('employee/fetchEmployeeById', async (Config, thunkApi) => {
+>('employee/fetchEmployeeById', async (config, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 
     try {
         const response = await extra.api.get<Employee[]>(
-            `/users`,
-            {},
+            `/users?${config}`,
         );
 
         if (!response.data) {
