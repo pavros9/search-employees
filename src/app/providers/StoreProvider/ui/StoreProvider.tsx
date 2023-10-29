@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 import { Provider } from 'react-redux';
 import { createReduxStore } from '../config/store';
 import { StateSchema } from '../config/StateSchema';
+import ReduxToastr, { ReduxToastrProps, ToastrState } from 'react-redux-toastr'
+
 
 interface StoreProviderProps {
     children?: ReactNode;
@@ -13,5 +15,16 @@ export const StoreProvider = (props: StoreProviderProps) => {
 
     const store = createReduxStore(initialState as StateSchema);
 
-    return <Provider store={store}>{children}</Provider>;
+    return <Provider store={store}>
+        {children}
+        <ReduxToastr
+            timeOut={4000}
+            newestOnTop={false}
+            preventDuplicates
+            position="top-right"
+            transitionIn="fadeIn"
+            transitionOut="fadeOut"
+            progressBar
+            closeOnToastrClick />
+    </Provider>;
 };

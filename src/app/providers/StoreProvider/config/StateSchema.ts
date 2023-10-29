@@ -2,7 +2,8 @@ import { AxiosInstance } from 'axios';
 import { EmployeeSchema } from 'entities/Employee';
 
 export interface StateSchema {
-    employee: EmployeeSchema
+    employee: EmployeeSchema,
+    toastr: any
 }
 
 export type StateSchemaKey = keyof StateSchema;

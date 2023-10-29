@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getIsLoadingEmployees } from 'entities/Employee'
 
+
 export const SearchEmployees = () => {
     const dispatch = useAppDispatch()
     const navigate = useNavigate()
@@ -20,6 +21,7 @@ export const SearchEmployees = () => {
 
         if (config) {
             dispatch(fetchEmployees(config))
+
         } else {
             dispatch(employeeActions.reset())
             navigate('/')

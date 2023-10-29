@@ -1,6 +1,7 @@
 import { Employee } from 'entities/Employee';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
+import { toastr } from 'react-redux-toastr'
 
 
 export const fetchEmployees = createAsyncThunk<
@@ -21,7 +22,7 @@ export const fetchEmployees = createAsyncThunk<
 
         return response.data;
     } catch (e) {
-        console.log(e);
+        toastr.error('Ошибка', 'Ошибка сервера')
         return rejectWithValue('error');
     }
 });

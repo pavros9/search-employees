@@ -34,6 +34,12 @@ export const employeeSlice = createSlice({
                     state.isLoading = false
                 },
             )
+            .addCase(
+                fetchEmployees.rejected,
+                (state) => {
+                    state.isLoading = false
+                },
+            )
     },
 });
 
