@@ -1,0 +1,12 @@
+.EmployeeList {
+    padding-left: 0;
+    // overflow: hidden;
+    // overflow-y: scroll;
+    // max-height: 400px;
+}
+
+.item {
+    transition: background-color .5s;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
