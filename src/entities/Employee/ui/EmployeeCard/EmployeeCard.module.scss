@@ -1,0 +1,17 @@
+.EmployeeCard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    flex: 0 0 47%
+}
+
+.ava {
+    flex: 0 0 422px;
+    min-height: 286px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E0E0E0;
+}
