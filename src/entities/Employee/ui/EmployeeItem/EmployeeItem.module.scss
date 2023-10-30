@@ -1,7 +1,7 @@
 .EmployeeItem {
     list-style-type: none;
     max-height: 70px;
-    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     border-radius: 10px;
     transition: all .5s;
@@ -21,14 +21,25 @@
     outline-offset: -1px;
 
     .description {
-        background-color: #E0E0E0;
+        background-color: var(--middle-grey);
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 }
 
+.username,
+.mail {
+    max-width: 140px;
+    overflow: hidden;
+    font-size: .875rem;
+}
+
 .username {
-    font-family: Montserrat-Semibold, sans-serif;
+    font-family: Montserrat-Bold, sans-serif;
+    margin-bottom: 5px;
+    color: var(--black);
 }
 
 .mail {
-    color: #76787D
+    color: var(--grey);
 }

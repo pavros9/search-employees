@@ -1,15 +1,20 @@
 .content {
-    box-shadow: 4px 4px 8px 0 rgb(34 60 80 / 20%);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     display: flex;
     height: 575px;
+    background: #FDFDFD;
 }
 
 .logo {
-    color: red;
-    font-family: Montserrat-Bold, sans-serif;
+    color: var(--red);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2rem;
+}
+
+.logo,
+.user {
+    font-family: Montserrat-Bold, sans-serif;
 }
 
 .sidebar {
@@ -39,5 +44,4 @@
     max-width: 1366px;
     padding: 50px;
     margin: auto;
-
 }

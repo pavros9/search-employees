@@ -1,17 +1,17 @@
 @import './fonts.scss';
+@import './variables.scss';
 @import 'react-redux-toastr/src/styles/index';
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body,
-#root,
-#root>div {
+#root {
     height: 100%
 }
 
 body {
     margin: 0;
-}
-
-.title {
-    color: red;
 }

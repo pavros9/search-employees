@@ -51,15 +51,13 @@ export const Input = memo((props: InputProps) => {
 
     const input = (
         <div
-            className={classNames(cls.InputWrapper, {}, [
-                className,
-            ])}
+            className={classNames(cls.InputWrapper, {})}
         >
             <input
                 type={type}
                 value={value}
                 onChange={onChangeHandler}
-                className={cls.input}
+                className={classNames(cls.input, {}, [className])}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 placeholder={placeholder}

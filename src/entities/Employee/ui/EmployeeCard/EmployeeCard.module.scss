@@ -3,15 +3,53 @@
     justify-content: space-between;
 }
 
-.description {
-    flex: 0 0 47%
-}
-
 .ava {
     flex: 0 0 422px;
     min-height: 286px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #E0E0E0;
+    border: 1px solid var(--middle-grey);
+}
+
+.about {
+    .title {
+        margin-bottom: 25px;
+    }
+
+    .text {
+        color: var(--grey);
+    }
+}
+
+.item {
+    .text {
+        color: var(--grey);
+    }
+}
+
+.description {
+    flex: 0 0 47%;
+
+    .item {
+        font-size: .875rem;
+        margin-bottom: 10px;
+    }
+
+    .item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-family: Montserrat-Bold, sans-serif;
+    margin-right: 5px;
+}
+
+.title {
+    font-family: Montserrat-Semibold, sans-serif;
 }

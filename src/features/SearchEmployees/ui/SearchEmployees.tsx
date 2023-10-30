@@ -35,12 +35,12 @@ export const SearchEmployees = () => {
         debouncedFetchData(value)
     }
 
-    return <>
+    return <div className={cls.SearchEmployees}>
         <Input label='Поиск сотрудников'
             onChange={onChange}
             isLoading={isLoading}
             className={cls.input}
             placeholder='Введите Id или имя ' />
-    </>
+    </div>
 
 }

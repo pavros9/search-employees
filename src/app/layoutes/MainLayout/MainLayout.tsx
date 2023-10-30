@@ -12,7 +12,7 @@ export const MainLayout = (props: MainLayoutProps) => {
     return <div className={cls.wrapper}>
         <div className={cls.topWrapper}>
             <div className={cls.logo}>Жилфонд</div>
-            <div>Пользователь</div>
+            <div className={cls.user}>Пользователь</div>
         </div>
         <div className={cls.content}>
             <Sidebar className={cls.sidebar} />

@@ -24,8 +24,9 @@ export const Sidebar = (props: SidebarProps) => {
 
     return <div className={classNames(cls.Sidebar, {}, [className])}>
         <SearchEmployees />
-        {employees && <EmployeeList employees={employees}
+        <EmployeeList
+            employees={employees}
             onClick={onClickItem}
-            label='Результаты' />}
+            label='Результаты' />
     </div>
 }

@@ -4,22 +4,23 @@
     border-radius: 48px;
     width: 100%;
     position: relative;
+    border: 1.5px solid var(--light-grey);
+    border-radius: 8px;
 }
 
 .input {
     width: 100%;
     padding: 13px 14.5px;
-    font-size: 14px;
-    border-radius: 8px;
     outline: none;
-    border: 1.5px solid #E9ECEF;
-
+    max-width: 180px;
+    border: none;
+    border-radius: 8px;
 }
 
 .label {
     margin-bottom: 22px;
     display: block;
-    color: #333333;
+    color: var(--black);
     font-weight: bold;
     font-family: Montserrat-Bold, sans-serif;
 }
