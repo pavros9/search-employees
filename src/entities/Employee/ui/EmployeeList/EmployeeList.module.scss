@@ -1,12 +1,21 @@
 .EmployeeList {
     padding-left: 0;
-    // overflow: hidden;
-    // overflow-y: scroll;
-    // max-height: 400px;
+    margin-top: 0;
 }
 
 .item {
     transition: background-color .5s;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+
+.text {
+    color: var(--grey);
 }

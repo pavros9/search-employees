@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 import { getSelectedEmployee } from "entities/Employee/model/selectors/getSelectedEmployee"
 
 interface EmployeeList {
-    employees: Employee[]
+    employees?: Employee[]
     onClick: (employee: Employee) => void
     label?: string
 }
@@ -15,16 +15,14 @@ export const EmployeeList = (props: EmployeeList) => {
     const selectedEmployee = useSelector(getSelectedEmployee)
 
     return <>
-        <h4>{label}</h4>
+        <h4 className={cls.title}>{label}</h4>
         <ul className={cls.EmployeeList}>
-            {employees.length > 0
-                ? employees.map(employee => <EmployeeItem
-                    idSelectedEmployee={selectedEmployee?.id}
-                    onClick={onClick}
-                    item={employee}
-                    key={employee.id}
-                    className={cls.item} />)
-                : 'ничего не найдено'}
+            {employees ? employees.length > 0 ? employees.map(employee => <EmployeeItem
+                idSelectedEmployee={selectedEmployee?.id}
+                onClick={onClick}
+                item={employee}
+                key={employee.id}
+                className={cls.item} />) : <span className={cls.text}>ничего не найдено</span> : <span className={cls.text}>начните поиск</span>}
         </ul>
     </>
 }
