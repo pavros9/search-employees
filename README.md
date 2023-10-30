@@ -1,6 +1,6 @@
 ## Ссылка
 
-Проект выложен на Netlify https://cute-daffodil-92505e.netlify.app/profile
+Проект выложен на Netlify https://cute-daffodil-92505e.netlify.app
 
 ## Запуск проекта
 
