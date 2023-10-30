@@ -1,12 +1,36 @@
 .EmployeeList {
     padding-left: 0;
     margin-top: 0;
+    overflow: hidden;
 }
 
 .item {
     transition: background-color .5s;
     margin-bottom: 20px;
     cursor: pointer;
+    max-width: 240px;
+}
+
+.list {
+    padding: 5px;
+
+    [data-test-id~="virtuoso-item-list"] {
+        margin-top: 5px !important;
+    }
+
+    overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar {
+    width: 4px;
+    /* color of the tracking area */
+
+}
+
+
+.list::-webkit-scrollbar-thumb {
+    background: var(--black);
+    /* width of the entire scrollbar */
 }
 
 .title {
