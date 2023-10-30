@@ -6,7 +6,7 @@ import { LoaderPage } from 'widgets/LoaderPage';
 
 export const AppRouter = memo(() => {
     return (
-        <Suspense fallback={<div><LoaderPage /></div>}>
+        <Suspense fallback={<LoaderPage />}>
             <Routes>
                 {Object.values(routeConfig).map(({ element, path }) => (
                     <Route
